@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Snapshot - Arkanza WiFi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600;700&display=swap');
+
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #28a745;
+            --background-color: #f4f7f6;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --heading-color: #1a1a1a;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 14px;
+        }
+
+        .snapshot-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            overflow: hidden;
+        }
+
+        .snapshot-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .snapshot-header h1 {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .snapshot-content {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .section {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            color: var(--heading-color);
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px 5px 8px 0; border-bottom: 1px solid #eee; }
+        td:last-child { text-align: right; font-weight: 700; white-space: nowrap; }
+        tr:last-child td { border-bottom: none; }
+        .total-row td { font-weight: 700; border-top: 2px solid var(--heading-color); color: var(--primary-color); }
+
+        ul { padding-left: 18px; margin: 10px 0 0 0; line-height: 1.7; }
+        li { margin-bottom: 5px; }
+        li::marker { color: var(--primary-color); }
+        
+        .highlight {
+            grid-column: 1 / -1;
+            background-color: #e9f5ff;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .promo-container { 
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 10px; 
+            justify-content: center; 
+        }
+        .promo-box { 
+            flex: 1 1 130px;
+            max-width: 180px;
+            border: 1px solid var(--border-color); 
+            border-radius: 8px; 
+            padding: 10px; 
+            text-align: center; 
+        }
+
+        .promo-box h3 { font-family: 'Poppins', sans-serif; font-size: 1em; margin: 0 0 5px 0; color: var(--primary-color); }
+        .promo-box .price { font-size: 1.3em; font-weight: 700; }
+        .promo-box .price span { font-size: 0.7em; color: #777; font-weight: 400; }
+        .promo-box.recommended { border: 2px solid var(--primary-color); }
+        .promo-box.voucher { background-color: #f0fff0; border-color: var(--secondary-color); }
+        .promo-box.voucher h3 { color: var(--secondary-color); }
+        
+        .scenario-note { font-size: 0.9em; color: #555; display: block; margin-top: 5px; }
+        .total-laba { font-size: 1.1em; font-weight: bold; border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 10px; }
+
+        @media (max-width: 600px) {
+            .snapshot-content { 
+                grid-template-columns: 1fr; 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="snapshot-container">
+        <div class="snapshot-header">
+            <h1>Business Snapshot: Arkanza WiFi</h1>
+        </div>
+
+        <div class="snapshot-content">
+            <!-- Keuangan -->
+            <div class="section">
+                <h2>Keuangan</h2>
+                <strong>Modal Awal:</strong>
+                <table>
+                    <tr><td>Starlink & Fiber</td> <td>Rp 7.050.000</td></tr>
+                    <tr><td>Peralatan Kerja</td> <td>Rp 500.000</td></tr>
+                    <tr class="total-row"><td>TOTAL</td> <td>Rp 7.550.000</td></tr>
+                </table>
+                <br><strong>Biaya Bulanan:</strong>
+                <table>
+                    <tr><td>Langganan Internet</td> <td>Rp 480.000</td></tr>
+                </table>
+            </div>
+
+            <!-- Proyeksi Laba Bersih (UPDATED SECTION) -->
+            <div class="section">
+                <h2>Proyeksi Laba Bersih (Skenario)</h2>
+                
+                <strong>1. Skenario Langganan Bulanan</strong>
+                <small class="scenario-note">Asumsi pendapatan rata-rata Rp 130.000/pelanggan.</small>
+                <ul>
+                    <li><b>10 Pelanggan:</b> (1,3jt - 480rb) = <b>Rp 820.000</b></li>
+                    <li><b>20 Pelanggan:</b> (2,6jt - 480rb) = <b>Rp 2.120.000</b></li>
+                </ul>
+
+                <strong>2. Skenario Penjualan Voucher</strong>
+                 <small class="scenario-note">Asumsi: 3 mitra mencapai target harian.</small>
+                <ul>
+                    <li><b>Laba Anda (40%):</b> 40% dari 900rb = <b>Rp 360.000</b></li>
+                </ul>
+                
+                <div class="total-laba">
+                    <strong>Total Potensi Laba Gabungan</strong>
+                    <small class="scenario-note">Skenario: 10 Pelanggan + 3 Mitra Voucher</small>
+                    Rp 820.000 + Rp 360.000 = <strong><u>Rp 1.180.000 / bulan</u></strong>
+                </div>
+            </div>
+
+            <!-- Titik Impas -->
+            <div class="highlight">
+                Titik Impas (BEP): <strong>4 pelanggan bulanan</strong> untuk menutupi operasional.
+            </div>
+
+            <!-- Model Bisnis -->
+            <div class="section">
+                <h2>Model Bisnis</h2>
+                <ul>
+                    <li><strong>Langganan Bulanan:</strong> Target utama untuk pendapatan stabil.</li>
+                    <li><strong>Voucher Harian:</strong> Dijual via mitra (warung/konter pulsa).</li>
+                    <li><strong>Bagi Hasil Voucher:</strong> 60% Mitra, 40% Arkanza WiFi.</li>
+                </ul>
+            </div>
+
+            <!-- Strategi -->
+            <div class="section full-width">
+                <h2>Strategi Pemasaran</h2>
+                <ul>
+                    <li>Sebar brosur & spanduk di area target (perumahan, kos-kosan, pedesaan).</li>
+                    <li>Gunakan status WhatsApp & Google Maps untuk promosi digital lokasi Anda.</li>
+                    <li>Buat program "Ajak Tetangga": pelanggan lama yang berhasil membawa pelanggan baru dapat diskon 1 bulan.</li>
+                    <li>Dekati warung atau konter pulsa untuk menjadi mitra penjualan voucher.</li>
+                </ul>
+            </div>
+
+            <!-- Produk -->
+            <div class="section full-width">
+                <h2>Produk & Harga Promosi</h2>
+                <div class="promo-container">
+                    <div class="promo-box">
+                        <h3>HEMAT</h3>
+                        <div class="price">100rb<span>/bln</span></div>
+                        20 Mbps
+                    </div>
+                    <div class="promo-box recommended">
+                        <h3>KELUARGA</h3>
+                        <div class="price">130rb<span>/bln</span></div>
+                        30 Mbps
+                    </div>
+                    <div class="promo-box">
+                        <h3>SUPER</h3>
+                        <div class="price">150rb<span>/bln</span></div>
+                        50 Mbps
+                    </div>
+                    <div class="promo-box voucher">
+                        <h3>VOUCHER</h3>
+                        <div class="price">2rb<span>/6jam</span></div>
+                        <div class="price">5rb<span>/24jam</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
