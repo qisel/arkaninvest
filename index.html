@@ -1,50 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rencana Investasi Arkan</title>
-<!-- Memuat Tailwind CSS CDN untuk styling modern dan responsif -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                fontFamily: {
-                    sans: ['Inter', 'sans-serif'], // Menggunakan font Inter
-                },
-                colors: {
-                    'arkan-blue': '#0d47a1',
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul Tab Browser --><title>Arkana Investasi - Sukses Bersama, Maju Lebih Cepat</title>
+    <!-- Memuat Tailwind CSS CDN untuk styling modern dan responsif --><script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Menggunakan font Inter
+                    },
+                    colors: {
+                        'arkan-blue': '#0d47a1',
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        /* Custom styles untuk penempatan judul di atas gambar */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            max-width: 4xl; /* Sesuai dengan max-w-4xl di parent div */
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 1.5rem; /* Menyesuaikan dengan rounded-xl */
+            overflow: hidden; /* Penting agar gambar tidak keluar dari border radius */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Shadow yang lebih kuat */
+        }
+        .hero-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.0) 100%); /* Gradien gelap di atas gambar */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem; /* Padding agar teks tidak terlalu mepet */
+        }
+        .hero-title {
+            font-size: 2.5rem; /* Ukuran teks lebih besar */
+            font-weight: 800; /* Lebih tebal */
+            line-height: 1.1;
+            color: #ffffff;
+            z-index: 10;
+        }
+        .hero-moto {
+            font-size: 1.25rem; /* Ukuran moto */
+            font-weight: 300;
+            color: #d1d5db; /* Abu-abu terang */
+            margin-top: 0.5rem;
+            z-index: 10;
+        }
+
+        /* Styling tambahan untuk tabel agar lebih solid */
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        th:first-child { border-top-left-radius: 0.5rem; }
+        th:last-child { border-top-right-radius: 0.5rem; }
+        tbody tr:last-child td:first-child { border-bottom-left-radius: 0.5rem; }
+        tbody tr:last-child td:last-child { border-bottom-right-radius: 0.5rem; }
+    </style>
 </head>
-<!-- Body menggunakan latar belakang gelap (Deep Blue) dan teks putih -->
-<body class="bg-gray-900 text-white font-sans p-4 md:p-8">
-    <!-- Kontainer utama untuk membatasi lebar di desktop dan memusatkan konten -->
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-2 mt-4 text-blue-400">
-            📈 Rencana Investasi Arkan
-        </h1>
-        <p class="text-sm text-center text-gray-400 mb-6">
-            Membangun & Berkembang Bersama
-        </p>
+<!-- Body menggunakan latar belakang gelap (Deep Blue) dan teks putih --><body class="bg-gray-900 text-white font-sans p-4 md:p-8">
+    <!-- Kontainer utama untuk membatasi lebar di desktop dan memusatkan konten --><div class="max-w-4xl mx-auto">
 
-        <!-- Gambar Hero Responsif -->
-        <img src="https://github.com/qisel/arkaninvest/blob/590465f1dec803221f6056bdb60b1b9de301c87c/teknisifoto.png?raw=true" 
-             alt="Foto Teknis Arkan" 
-             class="w-full max-w-xl mx-auto rounded-xl shadow-2xl mb-8 border-4 border-blue-700 object-cover">
+        <!-- HEADER SECTION BARU: Judul, Moto, dan Gambar di satu area --><div class="hero-section mb-8 relative rounded-2xl">
+            <!-- Gambar Hero --><img src="https://github.com/qisel/arkaninvest/blob/590465f1dec803221f6056bdb60b1b9de301c87c/teknisifoto.png?raw=true" 
+                alt="Foto Teknis Arkan" 
+                class="w-full h-64 md:h-96 object-cover rounded-2xl">
+            
+            <!-- Overlay untuk teks di atas gambar --><div class="hero-image-overlay rounded-2xl">
+                <h1 class="hero-title">
+                    ARKAN INVESTASI
+                </h1>
+                <p class="hero-moto">
+                    "Sukses Bersama, Maju Lebih Cepat"
+                </p>
+            </div>
+        </div>
 
-        <!-- KARTU SEKSI 1: Investasi Internet -->
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 transition duration-300 hover:shadow-blue-500/50">
+        <!-- KARTU SEKSI 1: Investasi Internet --><div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 transition duration-300 hover:shadow-blue-500/50">
             <div class="text-xl font-bold text-yellow-400 mb-4 border-b pb-3 border-yellow-400/30">
                 1. Investasi Internet / ArkanaNetwork
             </div>
             
             <div class="overflow-x-auto">
-                <table class="min-w-full text-left text-sm rounded-lg overflow-hidden border-separate border-spacing-0">
+                <table class="min-w-full text-left text-sm rounded-lg overflow-hidden">
                     <thead class="bg-blue-700 text-base">
                         <tr>
                             <th class="p-3 border-r border-blue-600">Keterangan</th>
@@ -80,7 +132,7 @@
                 <b class="text-blue-300">Contoh Perhitungan:</b><br>
                 <ul class="list-disc ml-5 mt-2 space-y-1 text-gray-300">
                     <li>Modal awal: Rp 7.400.000</li>
-                    <li>Laba bersih: Rp 650.000/bulan × 11,4 bulan ≈ Rp 7.410.000 (BEP pertama)</li>
+                    <li>Laba bersih: Rp 650.000/bulan $\times$ 11,4 bulan $\approx$ Rp 7.410.000 (BEP pertama)</li>
                     <li>Setelah BEP pertama, investor menerima laba Rp 7.410.000.</li>
                     <li>Pada BEP kedua (bulan ke-22,8), investor mendapat laba tambahan Rp 7.410.000 + pengembalian modal Rp 7.400.000.</li>
                 </ul>
@@ -90,14 +142,13 @@
             </div>
         </div>
 
-        <!-- KARTU SEKSI 2: Investasi Ayam Petelur -->
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 transition duration-300 hover:shadow-blue-500/50">
+        <!-- KARTU SEKSI 2: Investasi Ayam Petelur --><div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 transition duration-300 hover:shadow-blue-500/50">
             <div class="text-xl font-bold text-yellow-400 mb-4 border-b pb-3 border-yellow-400/30">
                 2. Investasi Ayam Petelur / ArkanaTelur
             </div>
             
             <div class="overflow-x-auto">
-                <table class="min-w-full text-left text-sm rounded-lg overflow-hidden border-separate border-spacing-0">
+                <table class="min-w-full text-left text-sm rounded-lg overflow-hidden">
                     <thead class="bg-blue-700 text-base">
                         <tr>
                             <th class="p-3 border-r border-blue-600">Keterangan</th>
@@ -137,7 +188,7 @@
                 <b class="text-blue-300">Contoh Perhitungan:</b><br>
                 <ul class="list-disc ml-5 mt-2 space-y-1 text-gray-300">
                     <li>Modal awal: Rp 4.000.000</li>
-                    <li>Laba bersih: Rp 10.000/hari × 400 hari = Rp 4.000.000 (BEP pertama)</li>
+                    <li>Laba bersih: Rp 10.000/hari $\times$ 400 hari = Rp 4.000.000 (BEP pertama)</li>
                     <li>Setelah BEP pertama, investor telah menerima Rp 4.000.000 laba.</li>
                     <li>Pada BEP kedua (hari ke-800), investor mendapat laba tambahan Rp 4.000.000 + pengembalian modal Rp 4.000.000.</li>
                 </ul>
@@ -147,14 +198,13 @@
             </div>
         </div>
 
-        <!-- KARTU SEKSI 3: Investasi Driver -->
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 transition duration-300 hover:shadow-blue-500/50">
+        <!-- KARTU SEKSI 3: Investasi Driver --><div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 transition duration-300 hover:shadow-blue-500/50">
             <div class="text-xl font-bold text-yellow-400 mb-4 border-b pb-3 border-yellow-400/30">
                 3. Investasi Driver / ArkanaDriver
             </div>
 
             <div class="overflow-x-auto">
-                <table class="min-w-full text-left text-sm rounded-lg overflow-hidden border-separate border-spacing-0">
+                <table class="min-w-full text-left text-sm rounded-lg overflow-hidden">
                     <thead class="bg-blue-700 text-base">
                         <tr>
                             <th class="p-3 border-r border-blue-600">Keterangan</th>
@@ -190,18 +240,17 @@
                 <b class="text-blue-300">Contoh Perhitungan:</b><br>
                 <ul class="list-disc ml-5 mt-2 space-y-1 text-gray-300">
                     <li>Modal awal: Rp 5.000.000</li>
-                    <li>Laba bersih: Rp 30.000/hari × 167 hari = Rp 5.010.000 (BEP pertama)</li>
+                    <li>Laba bersih: Rp 30.000/hari $\times$ 167 hari = Rp 5.010.000 (BEP pertama)</li>
                     <li>Setelah BEP pertama, investor telah menerima Rp 5.010.000 laba.</li>
                     <li>Pada BEP kedua (hari ke-334), investor mendapat laba tambahan Rp 5.010.000 + pengembalian modal Rp 5.000.000.</li>
                 </ul>
                 <p class="mt-3 text-center text-lg font-extrabold text-yellow-400">
-                    👉 Total diterima setelah 2 BEP: <span class="text-2xl">Rp 15.020.000</span> selama ±10 bulan.
+                    👉 Total diterima setelah 2 BEP: <span class="text-2xl">Rp 15.020.000</span> selama $\pm$10 bulan.
                 </p>
             </div>
         </div>
         
-        <!-- KARTU SEKSI 4: Cara Berinvestasi & Ringkasan -->
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 transition duration-300 hover:shadow-blue-500/50">
+        <!-- KARTU SEKSI 4: Cara Berinvestasi & Ringkasan --><div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 transition duration-300 hover:shadow-blue-500/50">
             <div class="text-xl font-bold text-yellow-400 mb-4 border-b pb-3 border-yellow-400/30">
                 💡 Cara Berinvestasi
             </div>
@@ -221,7 +270,7 @@
             </div>
 
             <div class="overflow-x-auto">
-                <table class="min-w-full text-left text-sm rounded-lg overflow-hidden border-separate border-spacing-0">
+                <table class="min-w-full text-left text-sm rounded-lg overflow-hidden">
                     <caption class="text-lg font-semibold text-blue-400 mb-2">Ringkasan Investasi</caption>
                     <thead class="bg-blue-700 text-base">
                         <tr>
@@ -255,8 +304,7 @@
             </div>
         </div>
 
-        <!-- Footer -->
-        <div class="text-center mt-10 pb-4 text-sm text-gray-500">
+        <!-- Footer --><div class="text-center mt-10 pb-4 text-sm text-gray-500">
             © 2025 Arkan Network | Membangun & Berkembang Bersama
         </div>
     </div>
